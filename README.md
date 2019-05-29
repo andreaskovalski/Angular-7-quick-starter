@@ -8,5 +8,4 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 
 ### 
-This template is for quick deploy the project on Angular. Contains the basic sections (header, content, footer) 
-and two pages for example. Just download it and run 'ng serve'
+This template is for quick deploy the project on Angular. Contains the basic sections (header, content, footer) and two pages for example. Just download it and run 'ng serve'
