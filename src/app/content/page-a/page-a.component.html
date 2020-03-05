@@ -1,3 +1,20 @@
-<p>
-  page-a works!
-</p>
+<form [formGroup]="form" class="form">
+    <div class="form-control">
+        <mat-form-field>
+            <mat-label>First Name</mat-label>
+            <input matInput formControlName="first">
+        </mat-form-field>
+    </div>
+
+    <div class="form-control">
+        <mat-form-field>
+            <mat-label>Last Name</mat-label>
+            <input matInput formControlName="last">
+        </mat-form-field>
+    </div>
+    <div>
+        <button mat-raised-button color="primary" (click)="onSubmit()" type="submit">Accent</button>
+    </div>
+
+    <div *ngIf="messageIsSent">Message sent to: {{form.controls.first.value}}</div>
+</form>

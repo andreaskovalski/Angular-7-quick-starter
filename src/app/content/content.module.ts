@@ -4,7 +4,7 @@ import { ContentComponent } from './content.component';
 import {HomePageModule} from './home-page/home-page.module';
 import {RouterModule} from '@angular/router';
 import {HeaderRoutingModule} from '../header/header-routing.module';
-import {PageAModule} from "./page-a/page-a.module";
+import {PageAModule} from './page-a/page-a.module';
 
 @NgModule({
   declarations: [ContentComponent],
