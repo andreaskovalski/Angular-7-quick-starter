@@ -34,7 +34,7 @@ export class PageAComponent implements OnInit {
             )
             .subscribe();
 
-        this.form.valueChanges.subscribe(() => this.messageIsSent = false)
+        this.form.valueChanges.subscribe(() => this.messageIsSent = false);
     }
 
     public onSubmit(): void {

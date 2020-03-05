@@ -16,5 +16,5 @@
         <button mat-raised-button color="primary" (click)="onSubmit()" type="submit">Accent</button>
     </div>
 
-    <div *ngIf="messageIsSent">Message sent to: {{form.controls.first.value}}</div>
+    <div *ngIf="messageIsSent">Message sent to: {{form.controls.first.value}} {{form.controls.last.value}}</div>
 </form>
