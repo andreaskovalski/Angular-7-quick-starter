@@ -1,9 +1,9 @@
-import {HttpErrorResponse, HttpResponse} from '@angular/common/http';
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {Subject} from 'rxjs';
-import {catchError, takeUntil, tap} from 'rxjs/operators';
-import {IHomePageInterface} from 'src/app/content/home-page/home-page.interface';
-import {HomePageService} from 'src/app/content/home-page/home-page.service';
+import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subject } from 'rxjs';
+import { catchError, takeUntil, tap } from 'rxjs/operators';
+import { IHomePageInterface } from 'src/app/content/home-page/home-page.interface';
+import { HomePageService } from 'src/app/content/home-page/home-page.service';
 
 @Component({
     selector: 'home-page',

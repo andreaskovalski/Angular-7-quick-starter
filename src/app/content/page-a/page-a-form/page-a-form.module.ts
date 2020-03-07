@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {ReactiveFormsModule} from '@angular/forms';
-import {PageAFormComponent} from 'src/app/content/page-a/page-a-form/page-a-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { PageAFormComponent } from 'src/app/content/page-a/page-a-form/page-a-form.component';
 
 @NgModule({
     imports: [
@@ -15,4 +15,5 @@ import {PageAFormComponent} from 'src/app/content/page-a/page-a-form/page-a-form
         PageAFormComponent,
     ],
 })
-export class PageAFormModule { }
+export class PageAFormModule {
+}

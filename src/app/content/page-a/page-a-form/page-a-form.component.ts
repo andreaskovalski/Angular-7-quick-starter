@@ -1,18 +1,18 @@
-import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
-import {Subject} from 'rxjs';
-import {IFormConfig, IPageAFormActionsInterface} from 'src/app/content/page-a/page-a-form/page-a-form.interface';
+import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { Subject } from 'rxjs';
+import { IFormConfig, IPageAFormActionsInterface } from 'src/app/content/page-a/page-a-form/page-a-form.interface';
 
 @Component({
     selector: 'page-a-form',
     templateUrl: './page-a-form.component.html',
     styleUrls: ['./page-a-form.component.scss'],
 })
-export class PageAFormComponent implements OnInit {
+export class PageAFormComponent {
 
     constructor(
-        public activeModal: NgbActiveModal
+        public activeModal: NgbActiveModal,
     ) {
         this.createForm();
     }
@@ -31,11 +31,6 @@ export class PageAFormComponent implements OnInit {
             location: new FormControl(),
             age: new FormControl('', [Validators.required, Validators.pattern(/^[0-9]+(?!.)/)]),
         });
-    }
-
-    public ngOnInit(): void {
-        console.log(this.form);
-        // this.form.valueChanges.subscribe((res) => console.log(res))
     }
 
     public onSubmit(): void {

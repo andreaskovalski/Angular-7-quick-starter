@@ -1,17 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {CustomMaterialModule} from 'src/app/custom-material.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CustomMaterialModule } from 'src/app/custom-material.module';
 
 import { AppComponent } from './app.component';
-import {HeaderModule} from './header/header.module';
-import {FooterModule} from './footer/footer.module';
-import {ContentModule} from './content/content.module';
+import { HeaderModule } from './header/header.module';
+import { FooterModule } from './footer/footer.module';
+import { ContentModule } from './content/content.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
     ],
     imports: [
         BrowserModule,
@@ -23,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         NgbModule,
     ],
     providers: [],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {
+}

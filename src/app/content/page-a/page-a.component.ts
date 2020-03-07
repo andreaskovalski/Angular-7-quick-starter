@@ -3,14 +3,14 @@ import {
     OnDestroy,
     OnInit,
 } from '@angular/core';
-import {FormGroup} from '@angular/forms';
-import {NgbModal, NgbModalRef} from '@ng-bootstrap/ng-bootstrap';
-import {Subject} from 'rxjs';
-import {PageAFormComponent} from 'src/app/content/page-a/page-a-form/page-a-form.component';
-import {filter, takeUntil, tap} from 'rxjs/operators';
-import {IPageAFormActionsInterface} from 'src/app/content/page-a/page-a-form/page-a-form.interface';
-import {IFormData} from 'src/app/content/page-a/page-a.interface';
-import {PageAService} from 'src/app/content/page-a/page-a.service';
+import { FormGroup } from '@angular/forms';
+import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
+import { Subject } from 'rxjs';
+import { PageAFormComponent } from 'src/app/content/page-a/page-a-form/page-a-form.component';
+import { filter, takeUntil, tap } from 'rxjs/operators';
+import { IPageAFormActionsInterface } from 'src/app/content/page-a/page-a-form/page-a-form.interface';
+import { IFormData } from 'src/app/content/page-a/page-a.interface';
+import { PageAService } from 'src/app/content/page-a/page-a.service';
 
 
 @Component({
@@ -29,7 +29,7 @@ export class PageAComponent implements OnInit, OnDestroy {
     constructor(
         private modalService: NgbModal,
         private pageAService: PageAService,
-        ) {
+    ) {
         this.tableData = this.pageAService.getItem(this.storageKey);
     }
 

@@ -1,7 +1,7 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {HomePageComponent} from './home-page.component';
-import {HomePageService} from './home-page.service';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HomePageComponent } from './home-page.component';
+import { HomePageService } from './home-page.service';
 
 @NgModule({
     declarations: [
