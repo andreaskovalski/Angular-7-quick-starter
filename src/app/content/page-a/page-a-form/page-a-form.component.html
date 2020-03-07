@@ -1,0 +1,46 @@
+<div class="modal-header">
+    <h4 class="modal-title">{{ formConfig.formTitle }}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+
+    <form [formGroup]="form">
+        <div class="form-group">
+            <label for="inputName">Name</label>
+            <input type="text" class="form-control" id="inputName" placeholder="Enter Name"
+                   formControlName="name">
+            <div *ngIf="isControlValid('name')" class="error">
+                Please provide a valid Name.
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail">Email</label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email" formControlName="email">
+            <div *ngIf="isControlValid('email')" class="error">
+                Please provide a valid Email.
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputLocation">Location</label>
+            <input type="text" class="form-control" id="inputLocation" placeholder="Enter Location"
+                   formControlName="location">
+        </div>
+
+        <div class="form-group">
+            <label for="inputAge">Age</label>
+            <input type="number" class="form-control" id="inputAge" placeholder="Enter Age" formControlName="age">
+            <div *ngIf="isControlValid('age')" class="error">
+                Please provide a valid Age.
+            </div>
+        </div>
+    </form>
+
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="onDelete()" *ngIf="formConfig.showDelete"
+            [disabled]="form.invalid">Delete
+    </button>
+    <button type="button" class="btn btn-outline-dark" (click)="onSubmit()">Save</button>
+</div>

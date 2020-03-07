@@ -1,13 +1,20 @@
 import {Injectable} from '@angular/core';
-import {Observable, of} from 'rxjs';
+import {IFormData} from 'src/app/content/page-a/page-a.interface';
 
 Injectable();
 
 export class PageAService {
-    public getData(): Observable<any> {
-       return of({
-            first: 'Andrey',
-           last: 'Kovalchuk',
-       });
+    private localStorage: Storage = window.localStorage;
+
+    public getItem(key: string): IFormData[] {
+        return JSON.parse(this.localStorage.getItem(key)) ;
+    }
+
+    public setItem(key: string, data: IFormData[]): void {
+       this.localStorage.setItem(key, JSON.stringify(data));
+    }
+
+    public deleteData(key: string): void {
+        this.setItem(key, []);
     }
 }

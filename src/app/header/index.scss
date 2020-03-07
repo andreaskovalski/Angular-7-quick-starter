@@ -1,18 +1,19 @@
 .header-container {
-  background-color: antiquewhite;
-  min-height: 50px;
+    background-color: antiquewhite;
+    min-height: 50px;
 
-  .header-menu {
-    ul {
-      list-style: none;
-      display: flex;
-      flex-grow: 1;
-      flex-shrink: 0;
-      align-items: center;
-      li {
-        margin-right: 20px;
-      }
+    .header-menu {
+        .navbar-nav {
+            flex-direction: row;
+
+            .nav-item {
+                margin-right: 20px;
+            }
+        }
+
+        .active {
+            border-bottom: 2px solid;
+        }
     }
-  }
 }
 

@@ -1,20 +1,27 @@
-<form [formGroup]="form" class="form">
-    <div class="form-control">
-        <mat-form-field>
-            <mat-label>First Name</mat-label>
-            <input matInput formControlName="first">
-        </mat-form-field>
-    </div>
+<button class="btn  btn-outline-primary" (click)="open()">Fill Form</button>
+<button class="btn  btn-outline-primary" (click)="clearStorage()" *ngIf="tableData.length">Clear Data</button>
+<ng-container *ngIf="tableData.length">
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Locale</th>
+            <th scope="col">Age</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let row of tableData; index as i" (click)="editTable(row, i)">
+            <th scope="row">{{i+1}}</th>
+            <td>{{ row.name }}</td>
+            <td>{{ row.email }}</td>
+            <td>{{ row.location }}</td>
+            <td>{{ row.age }}</td>
+        </tr>
+        </tbody>
+    </table>
+</ng-container>
 
-    <div class="form-control">
-        <mat-form-field>
-            <mat-label>Last Name</mat-label>
-            <input matInput formControlName="last">
-        </mat-form-field>
-    </div>
-    <div>
-        <button mat-raised-button color="primary" (click)="onSubmit()" type="submit">Accent</button>
-    </div>
+<hr>
 
-    <div *ngIf="messageIsSent">Message sent to: {{form.controls.first.value}} {{form.controls.last.value}}</div>
-</form>
