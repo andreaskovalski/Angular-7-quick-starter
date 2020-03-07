@@ -1,7 +1,6 @@
 import {
     Component,
     OnDestroy,
-    OnInit,
 } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
@@ -19,7 +18,7 @@ import { PageAService } from 'src/app/content/page-a/page-a.service';
     styleUrls: ['./page-a.component.scss'],
 })
 
-export class PageAComponent implements OnInit, OnDestroy {
+export class PageAComponent implements OnDestroy {
     public form: FormGroup;
     public tableData: IFormData[] = [];
 
@@ -31,12 +30,6 @@ export class PageAComponent implements OnInit, OnDestroy {
         private pageAService: PageAService,
     ) {
         this.tableData = this.pageAService.getItem(this.storageKey);
-    }
-
-    public ngOnInit(): void {
-        // if (this.localStorage.length) {
-        //     this.tableData = (JSON.parse(this.localStorage.getItem('form')));
-        // }
     }
 
     public open(): void {
