@@ -7,7 +7,7 @@ export class PageAService {
     private localStorage: Storage = window.localStorage;
 
     public getItem(key: string): IFormData[] {
-        return JSON.parse(this.localStorage.getItem(key));
+        return JSON.parse(this.localStorage.getItem(key)) || [];
     }
 
     public setItem(key: string, data: IFormData[]): void {
