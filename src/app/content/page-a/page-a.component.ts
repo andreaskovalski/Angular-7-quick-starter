@@ -77,7 +77,6 @@ export class PageAComponent implements OnDestroy {
 
                             return;
                     }
-
                 }),
             )
             .subscribe();
